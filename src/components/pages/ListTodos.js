@@ -1,5 +1,7 @@
 import { useEffect } from "react";
 import { connect } from "react-redux";
+import M from "materialize-css/dist/js/materialize.min.js";
+
 import { useHistory, useParams } from "react-router-dom";
 import DataTable from "react-data-table-component";
 import { addTodo, clearErrors, deleteTodo, getTodos, setCurrent, updateStatus} from "../../actions/TodoActions";
@@ -20,6 +22,10 @@ const ListTodos = ({
 }) => {
   const { id } = useParams();
   const history = useHistory();
+  useEffect(() => {
+    //initialize materialize jsvsacript
+    M.AutoInit();
+  });
 
   useEffect(() => {
     if(id){
