@@ -18,7 +18,7 @@ const initialState = {
 
 
 
-
+ // eslint-disable-next-line
 export default (state = initialState, action) => {
   switch (action.type) {
     case GET_TODO_LISTS:
@@ -32,7 +32,7 @@ export default (state = initialState, action) => {
     case ADD_TODO_LIST:
       return{
         ...state,
-        todolists: [...state.todolists, action.payload.data],
+        todolists:  [action.payload.data, ...state.todolists],
         loading: false
       }
 

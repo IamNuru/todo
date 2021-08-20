@@ -86,7 +86,7 @@ const ListTodos = ({
       name: "Status",
       selector: (row) => row["completed"],
       cell: (row) =>
-        row["completed"] === 1 ? (
+        parseInt(row["completed"]) === 1 ? (
           <i className="material-icons center">done</i>
         ) : (
           <i className="material-icons center">do_not_disturb</i>
@@ -103,7 +103,7 @@ const ListTodos = ({
           <label>
             <input
               type="checkbox"
-              checked={!row.completed}
+              checked={(parseInt(row.completed) ===1 ? false : true )}
               onChange={() => changeStatus(row.id, row.completed)}
               value={row.completed}
             />
