@@ -19,9 +19,7 @@ import ProtectedRoute from "./components/inc/ProtectedRoute";
 import UnAuthorisedPage from "./components/inc/UnAuthorisedPage";
 import PageNotFound from "./components/inc/PageNotFound";
 import ResetPassword from "./components/pages/auth/ResetPassword";
-import { AddTodoItem } from "./components/modals/AddTodoItem";
-import EditTodoItem from "./components/modals/EditTodoItem";
-import TodoItemDetails from "./components/modals/TodoItemDetails";
+
 
 const App = () => {
   useEffect(() => {
@@ -37,9 +35,6 @@ const App = () => {
             <CreateTodoList />
             <ConfirmDelete />
             <Navbar />
-            <AddTodoItem />
-            <EditTodoItem />
-            <TodoItemDetails />
             <div className="content container">
               <main>
                 <div className="">

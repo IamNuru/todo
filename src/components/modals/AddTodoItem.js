@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { useParams, withRouter} from "react-router-dom";
 import { addTodo, clearErrors, getTodos} from "../../actions/TodoActions";
 
-export const AddTodoItem = ({ errors, success, addTodo, clearErrors, getTodos }) => {
+const AddTodoItem = ({ errors, success, addTodo, clearErrors, getTodos }) => {
 
   const { id } = useParams()
   
@@ -32,7 +32,7 @@ export const AddTodoItem = ({ errors, success, addTodo, clearErrors, getTodos })
   };
 
 
-  //submit form and persist to localstorage
+  //submit form and persist to server
   const onSubmit = async (e) => {
     e.preventDefault();
     await addTodo(id , data);

@@ -6,6 +6,9 @@ import { addTodo, clearErrors, deleteTodo, getTodos, setCurrent, updateStatus} f
 import { getTodolist, getTodolists } from "../../actions/TodolistActions";
 import Loader from "../inc/Loader";
 import TodolistSummary from "./partials/TodolistSummary";
+import AddTodoItem from "../../components/modals/AddTodoItem";
+import EditTodoItem from "../../components/modals/EditTodoItem";
+import TodoItemDetails from "../../components/modals/TodoItemDetails";
 
 const ListTodos = ({
   mytodolists: { current_todolist }, owner: {user},todo:{loading, todos},
@@ -133,6 +136,9 @@ const ListTodos = ({
 
   return (
     <div style={{ marginBottom: "5%" }}>
+      <AddTodoItem />
+      <EditTodoItem />
+      <TodoItemDetails />
       <div className="fixed-action-btn" style={{ top: "0", marginTop: "6%" }}>
         <a
           className="btn-floating btn-large green modal-trigger add-todo-floating-button"
