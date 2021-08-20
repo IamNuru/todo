@@ -1,0 +1,29 @@
+
+
+body{
+    /* font-family: 'Bitter', serif !important;
+    font-family: 'Dancing Script', cursive !important;
+    font-family: 'Lora', serif; */
+     font-family: 'STIX Two Text', serif !important;
+    /*font-family: 'Zilla Slab', serif !important; */
+
+    font-size: 20px;
+}
+
+.bg-default{
+   /* background-color: #65e492 !important; */
+   --tw-bg-opacity: 1;
+   background-color: rgba(110, 231, 183, var(--tw-bg-opacity)) !important;
+}
+
+a.link-hover{
+    color: rgb(11, 114, 11) !important;
+    border-bottom: 0.1px solid gray;
+}
+a.link-hover:hover{
+    transition: 0.7s;
+    border-width: 100%;
+    border-bottom: 3px solid rgb(11, 114, 11) !important;
+    color: rgb(11, 114, 11) !important;
+    font-weight: 500;
+}

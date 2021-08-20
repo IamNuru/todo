@@ -1,0 +1,354 @@
+.App {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  /*  background-image: url('./images/bg.png');
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover; */
+}
+
+.welcome-message span {
+  color: #10b4a7;
+  font-weight: 600;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+.homepage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 150px);
+  margin-bottom: 4rem;
+}
+
+.logo {
+  object-fit: cover;
+  height: 50px;
+  width: 50px;
+  margin-left: 10px;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.deleteCan {
+  color: rgb(216, 29, 29);
+}
+
+.homepagelists {
+  list-style: none;
+  width: 50%;
+}
+
+.homepagelists li {
+  font-size: 18px;
+  line-height: 35px;
+  border-bottom: 1px solid gray;
+}
+
+.homepagelists li:hover {
+  background-color: gray;
+  color: white;
+  box-shadow: 0px 10px 13px -7px rgba(0, 0, 0, 0.5);
+}
+
+.homepagelists li:hover a,
+.homepagelists li:hover .badge {
+  color: white;
+}
+
+.homepagelists li a {
+  flex-grow: 1;
+}
+
+.homepagelists li a .badge {
+  background-color: green;
+  border-radius: 50%;
+  color: white;
+  min-width: 0px !important;
+  font-weight: 600;
+  margin-top: 6px;
+}
+
+#toast-container {
+  top: auto !important;
+  right: auto !important;
+  bottom: 80%;
+  left: 0%;
+}
+
+.error_messge_icon:before {
+  font-family: "Material Icons";
+  content: "clear";
+  color: rgb(236, 32, 32);
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.success_messge_icon:before {
+  font-family: "Material Icons";
+  content: "done";
+  color: rgb(21, 216, 47);
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.todo-details div {
+  font-size: 18px;
+  margin-bottom: 1.8rem;
+}
+
+.todo-details > div > span:nth-child(1) {
+  font-family: "Zilla Slab", serif !important;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.detail-icon {
+  font-size: 6.2rem;
+}
+
+.success {
+  color: rgb(21, 216, 47);
+}
+
+.danger {
+  color: rgb(236, 32, 32);
+}
+
+.remark > span {
+  font-family: "Bitter", serif !important;
+  font-weight: 600;
+}
+
+.color-white {
+  color: white !important;
+}
+
+.bg-white {
+  background-color: white !important;
+}
+
+/* Authentications styles */
+.wrap-auth {
+  display: flex;
+  justify-content: center;
+  height: calc(100vh - 100px);
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 3rem;
+}
+
+.auth-form {
+  max-width: 450px;
+  padding: 12px;
+  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.35);
+  background-color: white;
+}
+
+.auth-form-title {
+  color: #34962e;
+  font-family: "Dancing Script", cursive !important;
+  font-size: 28px;
+}
+
+.auth-form-error {
+  color: rgb(233, 32, 32) !important;
+}
+
+.unauthorised-page {
+  display: block;
+  width: 100%;
+  margin-top: 4rem;
+}
+
+.unauthorised-page img {
+  width: 100%;
+  text-align: center;
+  height: 66.6%;
+  margin: auto;
+  display: flex;
+}
+
+.header-modal-close {
+  color: red;
+  margin: 8px 20px 0px 0px;
+}
+
+.todos-header {
+  font-weight: 600;
+  font-size: 1.4rem;
+  width: 80%;
+  margin-top: 2rem;
+}
+
+/**  tables */
+.hkcGBu {
+  font-weight: 800 !important;
+}
+
+.rdt_Pagination {
+  min-height: 42px !important;
+  height: 42px !important;
+}
+
+/** todolist summary /*/
+.todolist-summary-wrapper {
+  background: #e0e0e061;
+  padding: 20px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  -webkit-box-shadow: 0px 0px 0px 5px #a0a0a0, inset 0px 10px 27px -8px #141414,
+    0px 9px 24px -5px rgba(0, 0, 0, 0);
+  box-shadow: 0px 0px 0px 5px #a0a0a0, inset 0px 10px 27px -8px #141414,
+    0px 9px 24px -5px rgba(0, 0, 0, 0);
+}
+
+.todolist-summary {
+  max-width: 450px;
+  margin: auto;
+  text-align: center;
+}
+
+.todolist-summary .title {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.todolist-summary-content, .todo-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.todolist-summary-content-div span {
+  font-size: 1.28rem;
+}
+
+.todolist-summary-content-div span:nth-child(1) {
+  color: gray;
+}
+
+.todolist-summary-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.choose-todolist{
+  font-weight: 400 !important;
+  font-size: 17px !important;
+  border: 1px dashed gray !important;
+}
+
+.nav-wrapper a{
+  font-size: 21px !important;
+}
+
+@media screen and (max-width: 480px) {
+  .homepagelists {
+    width: 100%;
+  }
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .add-todo-floating-button {
+    margin-top: 70%;
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+  .unauthorised-page img {
+    width: 24rem;
+  }
+  #toast-container {
+    bottom: 80%;
+    left: 50%;
+  }
+}
+
+.pt-0 {
+  padding-top: 0px !important;
+}
+.pb-0 {
+  padding-bottom: 0px !important;
+}
+.pr-0 {
+  padding-right: 0px !important;
+}
+.pl-0 {
+  padding-left: 0px !important;
+}
+.py-0 {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+.px-4 {
+  padding: 0rem 0.5rem;
+}
+
+.mx-4 {
+  margin: 0rem 0.5;
+}
+.py-4 {
+  padding: 0.5rem 0rem;
+}
+.my-4 {
+  margin: 0.5rem 0rem;
+}
+.mb-2 {
+  margin-bottom: 0.25rem;
+}
+.mb-4 {
+  margin-bottom: 0.5rem;
+}
+.mt-2 {
+  margin-top: 0.25rem;
+}
+.mt-4 {
+  margin-top: 0.5rem;
+}
+
+.w-full {
+  width: 100%;
+}
+.w-25 {
+  width: 25%;
+}
+.w-50 {
+  width: 50%;
+}
+.w-75 {
+  width: 75%;
+}
+
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.text-left {
+  text-align: left;
+}
+.italic {
+  font-style: italic;
+}
+
+.flex {
+  display: flex;
+}
+.flex-grow {
+  flex-grow: 1;
+}
