@@ -2,11 +2,8 @@ import { useEffect } from "react";
 import { connect } from "react-redux";
 import { useHistory, useParams } from "react-router-dom";
 import DataTable from "react-data-table-component";
-import AddTodoItem from "../modals/AddTodoItem";
 import { addTodo, clearErrors, deleteTodo, getTodos, setCurrent, updateStatus} from "../../actions/TodoActions";
 import { getTodolist, getTodolists } from "../../actions/TodolistActions";
-import EditTodoItem from "../modals/EditTodoItem";
-import TodoItemDetails from "../modals/TodoItemDetails";
 import Loader from "../inc/Loader";
 import TodolistSummary from "./partials/TodolistSummary";
 
