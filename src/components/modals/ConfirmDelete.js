@@ -15,7 +15,7 @@ const ConfirmDelete = ({ current, deleteTodo }) => {
         </h4>
         <p>
           You are about to delete{" "}
-          <span className="bold">{current && current.title}</span>
+          <span style={{fontWeight:'600'}}>{current && current.title}</span>
         </p>
         <p className="my-4">Are you sure you want to delete?</p>
       </div>

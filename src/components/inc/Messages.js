@@ -1,4 +1,4 @@
-import { errorBeep2 } from "./Beeps"
+import { errorBeep2, errorBeep1 } from "./Beeps"
 
 //showing just a normal message
 export const normal_message = (message) => {

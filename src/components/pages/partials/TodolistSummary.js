@@ -20,7 +20,7 @@ const TodolistSummary = ({ todos}) => {
             <span>Completed: </span>
             <span>
               {todos && todos?.length > 0
-                ? todos.filter((t) => t.completed === 1).length
+                ? todos.filter((t) => parseInt(t.completed) === 1).length
                 : "0"}
             </span>
           </div>

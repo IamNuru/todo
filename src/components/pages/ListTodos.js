@@ -167,6 +167,7 @@ const ListTodos = ({
               customStyles={customStyles}
               pagination={true}
               paginationPerPage={5}
+              paginationRowsPerPageOptions={[5 , 10, 15, 20]}
             />
           ) : (
             <div className="text-center" style={{ marginTop: "5%" }}>

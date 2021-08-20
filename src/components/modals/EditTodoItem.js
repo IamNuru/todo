@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import {connect } from "react-redux"
+import { useParams } from "react-router-dom";
 import { clearErrors,  updateTodo, getTodos } from "../../actions/TodoActions"
 
 const EditTodoList = ({current,errors, mytodolists, updateTodo,  clearErrors, getTodos}) => {
 
+  const { id } = useParams()
     //state
     const [data, setData] = useState({
       title : '',
@@ -36,7 +38,7 @@ const EditTodoList = ({current,errors, mytodolists, updateTodo,  clearErrors, ge
     const onSubmit = async (e) =>{
         e.preventDefault()
        await updateTodo(current.id, data)
-       await getTodos(todolist)
+       await getTodos(id)
     }
 
 
