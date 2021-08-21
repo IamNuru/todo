@@ -255,8 +255,12 @@
   border: 1px dashed gray !important;
 }
 
+.nav-wrapper {
+  padding: 0rem 2rem !important;
+}
 .nav-wrapper a{
-  font-size: 21px !important;
+  font-size: 18px !important;
+  padding: 0rem 1.2rem !important;
 }
 
 
@@ -280,6 +284,18 @@
 
 
 
+@media screen and (max-width: 480px) {
+  .nav-wrapper {
+    padding: 0rem !important;
+  }
+  .nav-wrapper a{
+    font-size: 18px !important;
+    padding: 0rem 1.2rem !important;
+  }
+  .logo{
+    margin-left:0px;
+  }
+}
 @media screen and (max-width: 768px) {
   .add-todo-floating-button {
     margin-top: 70%;

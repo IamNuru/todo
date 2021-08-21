@@ -7,7 +7,7 @@ import Theme from "../theme/Theme"
 
 const Navbar = ({user:{loggedin}, theme:{light}, logout}) => {
   return (
-    <nav className={`${light ? 'navbar-lt' : 'navbar-dt'}`} style={{padding:'0rem 2rem'}}>
+    <nav className={`${light ? 'navbar-lt' : 'navbar-dt'}`}>
       <div className="nav-wrapper">
         <Link to="/" className="brand-logo left">
           <img className="logo" src={logo} alt="logo" />
