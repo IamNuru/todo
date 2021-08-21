@@ -126,7 +126,7 @@ const ListTodos = ({
       name: "Switch",
       selector: (row) => row["completed"],
       cell: (row) => (
-        <div className="switch">
+        <div className="switch" style={{fontSize:"22px"}}>
           <label>
             <input
               type="checkbox"
@@ -195,7 +195,7 @@ const ListTodos = ({
               columns={columns}
               data={todos}
               customStyles={customStyles}
-              pagination={true}
+              pagination={todos.length > 5 && true}
               paginationPerPage={5}
               paginationRowsPerPageOptions={[5 , 10, 15, 20]}
               onChangeRowsPerPage={()  => setTheme(light)}

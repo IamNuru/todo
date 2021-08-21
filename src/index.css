@@ -6,10 +6,8 @@ body{
     font-family: 'Lora', serif; */
      font-family: 'STIX Two Text', serif !important;
     /*font-family: 'Zilla Slab', serif !important; */
-
     font-size: 20px;
 }
-
 .bg-default{
    /* background-color: #65e492 !important; */
    --tw-bg-opacity: 1;
