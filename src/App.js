@@ -5,6 +5,7 @@ import "materialize-css/dist/css/materialize.min.css";
 import M from "materialize-css/dist/js/materialize.min.js";
 import "./App.css";
 import "./index.css";
+import "./styles/theme.css";
 import Footer from "./components/inc/Footer";
 import Navbar from "./components/inc/Navbar";
 import HomePage from "./components/pages/HomePage";
@@ -25,6 +26,8 @@ const App = () => {
   useEffect(() => {
     //initialize materialize jsvsacript
     M.AutoInit();
+    //initialize tooltip
+    M.Tooltip.init()
   });
 
   return (
@@ -35,7 +38,7 @@ const App = () => {
             <CreateTodoList />
             <ConfirmDelete />
             <Navbar />
-            <div className="content container">
+            <div className="content container" id="main-app-wrapper">
               <main>
                 <div className="">
                   <Switch>

@@ -138,6 +138,7 @@
   background-color: white !important;
 }
 
+
 /* Authentications styles */
 .wrap-auth {
   display: flex;
@@ -152,7 +153,7 @@
   max-width: 450px;
   padding: 12px;
   box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.35);
-  background-color: white;
+ 
 }
 
 .auth-form-title {
@@ -200,10 +201,15 @@
   min-height: 42px !important;
   height: 42px !important;
 }
+.rdt_TableRow:hover{
+  border:2px solid rgba(216, 218, 211, 0.986) !important;
+  
+  transition: 0.3s;
+}
 
 /** todolist summary /*/
 .todolist-summary-wrapper {
-  background: #e0e0e061;
+  
   padding: 20px;
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -253,6 +259,19 @@
   font-size: 21px !important;
 }
 
+
+.rdt_Pagination{
+  width:80% !important;
+  margin: 1.2rem auto;
+  display: -webkit-box !important;
+  display: -moz-box !important
+}
+
+.action-btns:hover{
+  background-color: rgb(218, 214, 214);
+  transition: 0.8s;
+}
+
 @media screen and (max-width: 480px) {
   .homepagelists {
     width: 100%;
@@ -299,7 +318,7 @@
 }
 
 .mx-4 {
-  margin: 0rem 0.5;
+  margin: 0rem 0.5rem;
 }
 .py-4 {
   padding: 0.5rem 0rem;

@@ -5,7 +5,7 @@ import { getTodolists } from "../../actions/TodolistActions"
 import Loader from '../inc/Loader';
 
 
-const HomePage = ({mytodolists:{todolists, loading}, owner: {user, loggedin}, getTodolists}) => {
+const HomePage = ({mytodolists:{todolists, loading}, owner: {user, loggedin}, theme: {light, lightTheme, darkTheme}, getTodolists}) => {
     useEffect(() =>{
         if(user){
            getTodolists(user.id) 
@@ -25,9 +25,9 @@ const HomePage = ({mytodolists:{todolists, loading}, owner: {user, loggedin}, ge
                     <h4 className="text-center w-full welcome-message" style={{marginBottom:'5rem'}}>Wecome Back! <span>{ user && user.username}</span></h4>
                     { !loading ? todolists?.length > 0 ?
                         <div className="">
-                            <h6 className="text-grey text-center" style={{fontWeight:'600'}}> 
+                            <p className="text-grey text-center" style={{fontWeight:'500', fontSize:"1.4rem"}}> 
                                 You have the following list of TodoList:
-                            </h6>
+                            </p>
                             <ul className="homepagelists w-full">
                                 {
                                     !loading ? (
@@ -68,7 +68,8 @@ const HomePage = ({mytodolists:{todolists, loading}, owner: {user, loggedin}, ge
 
 const mapStateToProps = state =>({
     mytodolists: state.todolist,
-    owner: state.user
+    owner: state.user,
+    theme: state.theme
 })
 
 export default connect(mapStateToProps,{getTodolists}) (HomePage);

@@ -1,0 +1,19 @@
+/** default light and dark theme settings */
+.light-theme{
+   background-color: white !important;
+}
+.dark-theme{
+    background-color: #0e0e0d !important;
+    color: white !important;
+}
+
+/** navbar */
+
+.navbar-lt, .footer-lt{
+   background-color: rgba(110, 231, 183) !important;
+}
+.navbar-dt, .footer-dt{
+    background-color: rgba(39, 39, 38) !important;
+    color: white !important;
+}
+

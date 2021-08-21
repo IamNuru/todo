@@ -32,3 +32,7 @@ export const USER_ERROR = "USER_ERROR"
 export const SET_LOGIN = "SET_LOGIN"
 export const CLEAR_USER_ERRORS = "CLEAR_USER_ERRORS"
 
+
+//theme variables
+export const SET_THEME = "LIGHT_THEME"
+

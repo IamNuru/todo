@@ -3,12 +3,13 @@ import logo from '../../images/logo.jpg';
 import { Link } from "react-router-dom";
 import { connect } from "react-redux"
 import { logout } from "../../actions/User";
+import Theme from "../theme/Theme"
 
-const Navbar = ({user:{loggedin}, logout}) => {
+const Navbar = ({user:{loggedin}, theme:{light}, logout}) => {
   return (
-    <nav className="bg-default" style={{padding:'0rem 2rem'}}>
+    <nav className={`${light ? 'navbar-lt' : 'navbar-dt'}`} style={{padding:'0rem 2rem'}}>
       <div className="nav-wrapper">
-        <Link to="/" className="brand-logo">
+        <Link to="/" className="brand-logo left">
           <img className="logo" src={logo} alt="logo" />
         </Link>
         
@@ -38,13 +39,17 @@ const Navbar = ({user:{loggedin}, logout}) => {
             <Link to="/">Home</Link>
           </li>
         </ul>
+        <div className="right theme-container" style={{marginRight: '4rem'}}>
+          <Theme />
+        </div>
       </div>
     </nav>
   );
 };
 
 const mapStateToProps = state =>({
-  user : state.user
+  user : state.user,
+  theme: state.theme
 })
 
 export default connect(mapStateToProps, { logout })(Navbar);

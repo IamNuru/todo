@@ -2,11 +2,11 @@ import { connect } from "react-redux";
 import EditTodolist from "../../modals/EditTodolist";
 import DeleteTodolist from "../../modals/DeleteTodolist";
 
-const TodolistSummary = ({ todos}) => {
+const TodolistSummary = ({ todos, theme:{light, lightTheme, darkTheme}}) => {
   const today = new Date().toISOString().slice(0, 10);
 
   return (
-    <div className="todolist-summary-wrapper">
+    <div className="todolist-summary-wrapper" style={{backgroundColor: light ? '#e0e0e061' : '#fafafa'}}>
       <div className="todolist-summary">
         <EditTodolist />
         <DeleteTodolist />
@@ -14,11 +14,11 @@ const TodolistSummary = ({ todos}) => {
         <div className="todolist-summary-content">
           <div className="todolist-summary-content-div">
             <span>Total Todos: </span>
-            <span>{todos && todos?.length}</span>
+            <span style={{color: light ? 'black' : 'black'}}>{todos && todos?.length}</span>
           </div>
           <div className="todolist-summary-content-div">
             <span>Completed: </span>
-            <span>
+            <span style={{color: light ? 'black' : 'black'}}>
               {todos && todos?.length > 0
                 ? todos.filter((t) => parseInt(t.completed) === 1).length
                 : "0"}
@@ -26,7 +26,7 @@ const TodolistSummary = ({ todos}) => {
           </div>
           <div className="todolist-summary-content-div">
             <span>Failed: </span>
-            <span>
+            <span style={{color: light ? 'black' : 'black'}}>
               {todos && todos?.length > 0
                 ? todos.filter(
                     (t) =>
@@ -55,6 +55,7 @@ const TodolistSummary = ({ todos}) => {
 
 const mapStateToProps = (state) => ({
   todos: state.todo.todos,
+  theme: state.theme
 });
 export default connect(mapStateToProps, {  })(
   TodolistSummary

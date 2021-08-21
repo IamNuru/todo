@@ -3,7 +3,7 @@ import { Link, useHistory } from "react-router-dom";
 import { connect } from "react-redux";
 import { register, clearErrors } from "../../../actions/User"
 
-const Register = ({ user:{errors, success, loggedin} , register, clearErrors }) => {
+const Register = ({ user:{errors, success, loggedin}, theme:{light} , register, clearErrors }) => {
   //iniatialise state
   const [errorMessage, setErrorMessage] = useState("");
   const [data, setData] = useState({
@@ -59,8 +59,8 @@ const Register = ({ user:{errors, success, loggedin} , register, clearErrors }) 
   };
 
   return (
-    <div className="wrap-auth">
-      <form onSubmit={onSubmit} className="container auth-form" autoComplete="">
+    <div className={`wrap-auth ${light ? 'light-theme' :'dark-theme'}`}>
+      <form onSubmit={onSubmit} className="container auth-form" autoComplete="" style={{boxShadow: !light && '0px 3px 10px 0px rgb(241 234 234 / 35%)'}}>
         <h4 className="mb-4 text-center s12 auth-form-title">Create an Account</h4>
         <div className="row">
           <div className="input-field col s12">
@@ -118,7 +118,8 @@ const Register = ({ user:{errors, success, loggedin} , register, clearErrors }) 
 };
 
 const mapStateToProps = state =>({
-  user: state.user
+  user: state.user,
+  theme: state.theme
 })
 
 export default connect(mapStateToProps, { register, clearErrors })(Register);

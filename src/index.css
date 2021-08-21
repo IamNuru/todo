@@ -27,3 +27,22 @@ a.link-hover:hover{
     color: rgb(11, 114, 11) !important;
     font-weight: 500;
 }
+
+
+/** set theme color modes **/
+/** dark theme */
+.dark-theme-color{
+    color: white
+}
+.dark-theme-background-color{
+    background-color: rgb(12, 11, 11);
+}
+
+
+/** light theme */
+.light-theme-color{
+    color: rgb(26, 25, 25)
+}
+.dark-theme-background-color{
+    background-color: white;
+}
