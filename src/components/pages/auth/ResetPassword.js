@@ -3,7 +3,7 @@ import { Link, useHistory } from "react-router-dom";
 import { connect } from "react-redux";
 import { resetPassword, clearErrors } from "../../../actions/User"
 
-const ResetPassword = ({ user:{errors, success, loggedin} , resetPassword, clearErrors }) => {
+const ResetPassword = ({ user:{errors, success, loggedin}, theme:{light} , resetPassword, clearErrors }) => {
   //iniatialise state
   const [errorMessage, setErrorMessage] = useState("");
   const [data, setData] = useState({
@@ -75,6 +75,7 @@ const ResetPassword = ({ user:{errors, success, loggedin} , resetPassword, clear
               name="username"
               value={username}
               onChange={onChange}
+              style={{color: light ? 'black' : 'white'}}
             />
             <label htmlFor="icon_prefix">Username</label>
             {
@@ -89,6 +90,7 @@ const ResetPassword = ({ user:{errors, success, loggedin} , resetPassword, clear
               name="password"
               value={password}
               onChange={onChange}
+              style={{color: light ? 'black' : 'white'}}
             />
             <label htmlFor="icon_prefix1">Password</label>
             {
@@ -138,7 +140,8 @@ const ResetPassword = ({ user:{errors, success, loggedin} , resetPassword, clear
 };
 
 const mapStateToProps = state =>({
-  user: state.user
+  user: state.user,
+  theme: state.theme
 })
 
 export default connect(mapStateToProps, { resetPassword, clearErrors })(ResetPassword);

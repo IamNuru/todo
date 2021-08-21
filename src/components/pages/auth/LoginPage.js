@@ -69,6 +69,7 @@ const LoginPage = ({ user:{errors, success, loggedin}, theme:{light} , login, cl
               name="username"
               value={username}
               onChange={onChange}
+              style={{color: light ? 'black' : 'white'}}
             />
             <label htmlFor="icon_prefix">Username</label>
             {
@@ -83,6 +84,7 @@ const LoginPage = ({ user:{errors, success, loggedin}, theme:{light} , login, cl
               name="password"
               value={password}
               onChange={onChange}
+              style={{color: light ? 'black' : 'white'}}
             />
             <label htmlFor="icon_prefix1">Password</label>
             {

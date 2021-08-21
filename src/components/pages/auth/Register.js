@@ -71,6 +71,7 @@ const Register = ({ user:{errors, success, loggedin}, theme:{light} , register, 
               name="username"
               value={username}
               onChange={onChange}
+              style={{color: light ? 'black' : 'white'}}
             />
             <label htmlFor="icon_prefix">Username</label>
             {
@@ -85,6 +86,7 @@ const Register = ({ user:{errors, success, loggedin}, theme:{light} , register, 
               name="password"
               value={password}
               onChange={onChange}
+              style={{color: light ? 'black' : 'white'}}
             />
             <label htmlFor="icon_prefix1">Password</label>
             {
